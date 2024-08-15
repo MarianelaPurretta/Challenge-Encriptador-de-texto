@@ -70,3 +70,9 @@ function copiarTexto() {
 
 // Asocio la función copiarTexto al botón de copiar
 botonCopiar.addEventListener('click', copiarTexto);
+
+// Función que reinicia el juego
+function botonReiniciar() {
+    textArea.value = ''; // Limpia el área de texto de entrada
+    mensaje.value = ''; // Limpia el área de texto de mensaje
+}

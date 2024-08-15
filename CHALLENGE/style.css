@@ -9,6 +9,13 @@
     --font-cur: 'Playwrite FR Moderne', cursive;
 }
 
+::selection {
+    background-color: var(--orange-color);
+    /* Color de fondo de la selección */
+    color: var(--primary-color);
+    /* Color del texto seleccionado */
+}
+
 body {
     background-image: linear-gradient(0deg, rgb(25, 25, 25), rgb(21, 21, 21)), linear-gradient(45deg, rgb(208, 179, 2) 0%, rgb(208, 179, 2) 14%, rgb(178, 144, 14) 14%, rgb(178, 144, 14) 22%, rgb(147, 110, 26) 22%, rgb(147, 110, 26) 26%, rgb(117, 75, 39) 26%, rgb(117, 75, 39) 38%, rgb(86, 41, 51) 38%, rgb(86, 41, 51) 78%, rgb(56, 6, 63) 78%, rgb(56, 6, 63) 100%), linear-gradient(135deg, rgb(208, 179, 2) 0%, rgb(208, 179, 2) 14%, rgb(178, 144, 14) 14%, rgb(178, 144, 14) 22%, rgb(147, 110, 26) 22%, rgb(147, 110, 26) 26%, rgb(117, 75, 39) 26%, rgb(117, 75, 39) 38%, rgb(86, 41, 51) 38%, rgb(86, 41, 51) 78%, rgb(56, 6, 63) 78%, rgb(56, 6, 63) 100%);
     background-blend-mode: overlay, overlay, normal;
@@ -31,13 +38,9 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-
     top: 5%;
-
     left: 5%;
-
     display: block;
-
 }
 
 
@@ -97,40 +100,12 @@ section {
 
 .text-area,
 .text-mensaje {
-    background: rgba(255, 255, 255, 0);
+    background-color: transparent !important;
     backdrop-filter: blur(30px) !important;
     border-radius: 8px;
     padding: 10px;
     position: relative;
     overflow: hidden;
-}
-
-.text-area::before,
-.text-mensaje::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 200%;
-    height: 100%;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
-    transition: 0.5s;
-    z-index: 2;
-}
-
-.text-area:hover::before,
-.text-mensaje:hover::before {
-    animation: shine 0.75s ease-in-out;
-}
-
-@keyframes shine {
-    0% {
-        left: -100%;
-    }
-
-    100% {
-        left: 100%;
-    }
 }
 
 .text-area {
@@ -143,7 +118,7 @@ section {
 
 .text-mensaje {
     border: 2px solid var(--orange-color);
-    color: var(--second-color);
+    color: var(--orange-color);
     width: 400px;
     height: 500px;
     margin-top: -11%;
@@ -153,8 +128,8 @@ section {
 .text-area:hover,
 .text-mensaje:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0 5px var(--orange-color),
-        0 0 20px var(--orange-color),
+    box-shadow: 0 0 5px var(--white-color),
+        0 0 20px var(--white-color),
         0 0 35px var(--orange-color),
         0 0 40px var(--orange-color);
 }
@@ -167,7 +142,8 @@ section {
 
 .boton-desencriptar,
 .boton-encriptar,
-.copiar {
+.copiar,
+.boton-reiniciar {
     border-radius: 24px;
     height: 67px;
     width: 150px;
@@ -211,6 +187,23 @@ section {
         0 0 20px var(--orange-color);
 }
 
+.boton-reiniciar {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(50px);
+    border: 2px solid var(--orange-color);
+    color: var(--white-color);
+}
+
+.boton-reiniciar:hover {
+    color: var(--orange-color);
+    transform: translateY(-10px);
+    background-color: transparent;
+    box-shadow: 0 0 5px var(--orange-color),
+        0 0 10px var(--orange-color),
+        0 0 15px var(--orange-color),
+        0 0 20px var(--orange-color);
+}
+
 .copiar {
     background: rgba(255, 255, 255, 0.123);
     backdrop-filter: blur(100px);
@@ -227,7 +220,7 @@ section {
 
 .copiar:hover {
     transform: translateY(-10px);
-    color: #B7D500;
+    color: #f7df0a;
     background-color: transparent;
     box-shadow: 0 0 5px var(--white-color),
         0 0 15px var(--white-color),

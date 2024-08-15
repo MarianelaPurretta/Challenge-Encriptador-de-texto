@@ -1,0 +1,96 @@
+* {
+    background: #c4c3c3;
+    font-family: 'Iner';
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.logo-alura {
+    padding-top: 10px;
+    margin-left: 10px;
+    width: 10%;
+
+}
+
+main {
+    display: flex;
+    margin-bottom: 50px;
+    margin-left: 80px;
+}
+
+.text-area {
+    border: none;
+    color: aqua;
+    margin-top: 90px;
+    text-transform: lowercase;
+}
+
+::placeholder {
+    color: #6972e7;
+
+    .text-area:focus {
+        outline: none;
+    }
+}
+
+.text-mensaje {
+    background: #ffffff;
+    background-repeat: no-repeat;
+    border: none !important;
+    border-radius: 24px;
+    color: blue;
+    margin-left: 98px;
+    margin-top: 20px;
+    padding-left: 20px;
+    position: fixed;
+
+}
+
+.text-mensaje:focus {
+    outline: none;
+}
+
+.botones {
+    display: flex;
+    margin-top: 18px;
+}
+
+.boton-desencriptar {
+    background: #f6f7f8;
+    border: 1px solid #6972e7 !important;
+    border-radius: 24px;
+    color: aquamarine;
+    cursor: pointer;
+    height: 67px;
+    margin-left: 30px;
+    width: 328px;
+}
+
+.boton-encriptar {
+    background: #6d6c70;
+    border: 1px solid #6972e7 !important;
+    border-radius: 24px;
+    color: rgb(23, 85, 64);
+    cursor: pointer;
+    height: 67px;
+    margin-left: 30px;
+    width: 328px;
+}
+
+.copiar {
+    border: 1px solid #6972e7 !important;
+    border-radius: 24px;
+    color: rgb(23, 85, 64);
+    cursor: pointer;
+    height: 67px;
+    margin-left: 108px;
+    margin-top: 402px;
+    position: absolute;
+    width: 336px;
+}
+
+.informacion {
+    color: #252525;
+    font-size: 18px;
+}

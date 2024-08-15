@@ -19,24 +19,24 @@ function botonEncriptar() {
         const textoEncriptado = encriptar(texto); // Encripto el texto validado
         mensaje.value = textoEncriptado; // Muestro el texto encriptado en el área de mensaje
     } else {
-        alert("Por favor, ingresa solo letras minúsculas y sin acentos."); // Mensaje de error
+        alert("Por favor, ingresa solo letras minúsculas y sin acentos.");
     }
 }
 
 // Función al presionar el botón de desencriptar
 function botonDesencriptar() {
-    const texto = validarTexto(textArea.value); // Valido el texto ingresado
+    const texto = validarTexto(textArea.value); // Valido 
     if (texto) {
-        const textoDesencriptado = desencriptar(texto); // Desencripta el texto validado
-        mensaje.value = textoDesencriptado; // Muestra el texto desencriptado en el área de mensaje
+        const textoDesencriptado = desencriptar(texto);
+        mensaje.value = textoDesencriptado;
     } else {
-        alert("Por favor, ingresa solo letras minúsculas y sin acentos."); // Mensaje de error
+        alert("Por favor, ingresa solo letras minúsculas y sin acentos.");
     }
 }
 
 // Función encriptar el texto según las reglas definidas
 function encriptar(stringEncriptada) {
-    stringEncriptada = stringEncriptada.toLowerCase(); // Convierto a minúsculas para consistencia
+    stringEncriptada = stringEncriptada.toLowerCase();
 
     // Reemplazo cada vocal según la regla en matrizCodigo
     for (let i = 0; i < matrizCodigo.length; i++) {
@@ -59,20 +59,20 @@ function desencriptar(stringDesencriptada) {
 // Función validar que el texto solo contiene letras minúsculas y sin acentos
 function validarTexto(texto) {
     const regex = /^[a-z\s]+$/;
-    return regex.test(texto) ? texto : null; // Retorno el texto si es válido, sino null
+    return regex.test(texto) ? texto : null;
 }
 // Función para copiar el texto encriptado al portapapeles
 function copiarTexto() {
-    mensaje.select(); // Selecciono el texto dentro del área de mensaje
-    document.execCommand('copy'); // Copio el texto seleccionado al portapapeles
+    mensaje.select();
+    document.execCommand('copy');
     alert("Texto copiado al portapapeles");
 }
 
-// Asocio la función copiarTexto al botón de copiar
+
 botonCopiar.addEventListener('click', copiarTexto);
 
 // Función que reinicia el juego
 function botonReiniciar() {
-    textArea.value = ''; // Limpia el área de texto de entrada
+    textArea.value = '';
     mensaje.value = ''; // Limpia el área de texto de mensaje
 }

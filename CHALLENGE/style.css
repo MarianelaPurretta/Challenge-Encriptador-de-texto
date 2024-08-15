@@ -106,15 +106,20 @@ section {
     padding: 10px;
     position: relative;
     overflow: hidden;
+
 }
 
 .text-area {
-    border-color: none;
+    border-color: var(--white-color);
     color: var(--white-color);
     width: 800px;
     height: 500px;
     text-transform: lowercase;
 
+}
+
+::placeholder {
+    color: var(--primary-color);
 }
 
 .text-mensaje {
